@@ -1,0 +1,147 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cormorant Garamond", serif;
+    background-color: #ffffff;
+    color: whitesmoke;
+    font-size: larger;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Style for navigation bar */
+.navbar {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: antiquewhite;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    position: relative;
+    transition: background-color 0.8s;
+}
+
+.navbar a:hover {
+    background-color: #ecbe41;
+    animation: hoverAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 10px; /* Adjust the distance to move right */
+    }
+}
+
+.collection-cards {
+    display: flex; /* Use flexbox to arrange cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+    gap: 20px; /* Add spacing between cards */
+    justify-content: space-around; /* Distribute cards evenly along the main axis */
+}
+
+.card {
+    width: 200px; /* Set the width of the card */
+    height: 300px; /* Set the height of the card */
+    margin: 10px;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 60%; /* Set the height of the image */
+    object-fit: cover; /* Cover the image within its container */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale up card on hover */
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-content h3 {
+    margin-bottom: 20px;
+}
+
+.card-content p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.section.background-image {
+    background-image: url('images/3025943.jpg'); /* Replace 'your-background-image.jpg' with your actual image URL */
+    background-size: cover; /* Cover the entire section with the background image */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color for the section content */
+    padding: 50px; /* Padding around the section content */
+    text-align: left; /* Center-align the text */
+    height: 600px; /* Height of the section */
+    margin-bottom: 40px; /* Add space between the section and the cards */
+}
+
+.section.background-image h2 {
+    margin-bottom: 25px; /* Bottom margin for the heading */
+    margin-top: 200px;
+    margin-right: 1000px;
+}
+
+.section.background-image p {
+    font-size: 18px; /* Font size for paragraph text */
+    line-height: 1.5; /* Line height for paragraph text */
+    margin-right: 350px;
+}
+
+/* Styling for footer */
+.footer {
+    background-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-nav {
+    background-color: #97854c; /* Background color for the footer navbar */
+    padding: 10px; /* Padding around the navbar links */
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Cormorant Garamond", serif; 
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f6e937; /* Change to your preferred hover color */
+}

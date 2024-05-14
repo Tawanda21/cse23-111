@@ -1,0 +1,93 @@
+body {
+    font-family: "Cormorant Garamond", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.header-bg {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.normal-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.normal-nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.normal-nav a:hover {
+    color: #ff6600; /* Change color on hover */
+}
+
+.video-section {
+    position: relative;
+    height: 300px; /* Adjusted height for the video section */
+    background-color: #000; /* Fallback background color */
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%; /* Let the video adjust its width */
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.video-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.video-content p {
+    font-size: 18px;
+}
+
+.main {
+    display: flex; /* Use flexbox for main content */
+    justify-content: center; /* Center main content horizontally */
+    align-items: flex-start; /* Align main content items at the top */
+}
+
+.details-container {
+    display: flex; /* Use flexbox for details container */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.details-content {
+    flex: 1; /* Allow details content to grow and take available space */
+    margin-right: 0px; /* Add spacing between details content and image */
+}
+
+.image-container {
+    flex: 0 0 auto; /* Do not allow image container to grow or shrink */
+}
+
+/* Move paragraphs to the left */
+.details-content p {
+    text-align: left;
+    margin-right: 600px;
+    color: #fff;
+}
+
+/* Change font color of the h1 element to white */
+main h1 {
+    color: #fff;
+}
