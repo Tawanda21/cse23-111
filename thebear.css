@@ -15,6 +15,10 @@ body {
 .normal-nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
 .normal-nav a {
@@ -22,6 +26,8 @@ body {
     color: #fff;
     padding: 10px 20px;
     transition: color 0.3s ease; /* Smooth transition for color change */
+    text-align: center; /* Center align text in nav links */
+    display: block; /* Ensure links take full area for padding */
 }
 
 .normal-nav a:hover {
@@ -59,35 +65,81 @@ body {
     font-size: 18px;
 }
 
-.main {
+main {
     display: flex; /* Use flexbox for main content */
     justify-content: center; /* Center main content horizontally */
     align-items: flex-start; /* Align main content items at the top */
+    padding: 20px; /* Add some padding */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .details-container {
     display: flex; /* Use flexbox for details container */
+    flex-direction: column; /* Arrange elements in a column */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .details-content {
-    flex: 1; /* Allow details content to grow and take available space */
-    margin-right: 0px; /* Add spacing between details content and image */
+    display: flex; /* Use flexbox for paragraphs */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin-bottom: 20px; /* Space between paragraphs and image */
+    color: #fff;
+}
+
+.details-content p {
+    flex: 1; /* Allow paragraphs to take equal space */
+    min-width: 300px; /* Ensure paragraphs don’t get too narrow */
+    margin-right: 20px; /* Space between paragraphs */
+    margin-bottom: 10px; /* Space below paragraphs for smaller screens */
 }
 
 .image-container {
-    flex: 0 0 auto; /* Do not allow image container to grow or shrink */
+    display: flex;
+    justify-content: center;
 }
 
-/* Move paragraphs to the left */
-.details-content p {
-    text-align: left;
-    margin-right: 600px;
-    color: #fff;
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Limit the max width of the image */
 }
 
-/* Change font color of the h1 element to white */
 main h1 {
     color: #fff;
+    text-align: center;
+    width: 100%; /* Ensure heading takes full width */
+    margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .video-content h2 {
+        font-size: 2.5em;
+    }
+
+    .video-content p {
+        font-size: 1.2em;
+    }
+
+    .normal-nav {
+        flex-direction: row; /* Stack links vertically */
+        align-items: center; /* Center align links */
+    }
+
+    .details-content {
+        flex-direction: column; /* Stack paragraphs vertically */
+    }
+
+    .details-content p {
+        margin-right: 0; /* Remove right margin for smaller screens */
+    }
+
+    .image-container {
+        margin-bottom: 20px; /* Add some space below the image */
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
 }
