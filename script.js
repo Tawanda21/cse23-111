@@ -1,11 +1,12 @@
 // JavaScript for image slideshow functionality
 let slideIndex = 0;
 const slides = document.getElementsByClassName("slideshow")[0].children;
+const slideWidth = slides[0].offsetWidth; // Get the width of each slide
 
 function showSlide(index) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.transition = "transform 0.5s ease";
-        slides[i].style.transform = `translateX(${100 * (i - index)}%)`;
+        slides[i].style.transform = `translateX(${-slideWidth * index}px)`; // Adjust transform value
     }
 }
 
